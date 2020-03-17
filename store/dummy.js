@@ -1,7 +1,7 @@
 const db = {
     'user': [{id: 1, name: 'Luis'}],
 };
- 
+  
 function list(tabla){
  return db[tabla];
 }
