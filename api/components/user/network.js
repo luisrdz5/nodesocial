@@ -23,10 +23,9 @@ router.get('/:id', function (req, res) {
     });
 });
 router.post('/', function (req, res) {
-    console.log(req.body);
     const lista = Controller.post(req.body)
     .then((user) => {
-        response.success(req, res, `user created: ${user}`, 200);
+        response.success(req, res, `user created: ${user.name}`, 200);
     })
     .catch((err) => {
         response.error(req, res, err.message, 500);

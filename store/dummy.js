@@ -10,13 +10,13 @@ async function get(tabla, id){
     return col.filter( item => item.id === id[0] || null );
 }
 async function upset(tabla, data){
-    //console.log(data);
     db[tabla].push(data);
+    return data;
 }
 async function remove(tabla, id){
-    console.log( db[tabla]);
     console.log(db[tabla].filter( item => item.id !== id ));
     db[tabla] = db[tabla].filter( item => item.id !== id );
+    return id;
 }
 module.exports = {
     list,
